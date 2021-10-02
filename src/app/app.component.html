@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+      <div class="col col1">
+        <input type="number" class="input-box"
+                #number="ngModel" [(ngModel)]="model.number" name="number"
+                (input)="onNumberChangeHandler(); calResult()"/>
+      </div>
+      <div class="col col2">
+        <select #calculation="ngModel" [(ngModel)]="model.calculation"
+                name="calculation" (change)="calResult()">
+          <option value="isPrime">isPrime</option>
+          <option value="isFibonacci">isFibonacci</option>
+        </select>
+      </div>
+      <div class="col col3">{{result}}</div>
+  </div>
+</div>
